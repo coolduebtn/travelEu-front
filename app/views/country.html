@@ -1,0 +1,18 @@
+
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <h1 class="page-header">{{country.name | uppercase}}</h1>
+
+  
+  <div>
+  	<p>{{country.description}}</p>
+  	<h2 class="sub-header">Cities</h2>
+  	<ul ng-repeat="city in country.cities">
+           <li> <a ng-href="#!/countries/{{country.permalink}}/cities/{{city.permalink}}">{{city.name}}</a></li>
+                
+    </ul>
+  </div>
+
+  
+  
+</div>

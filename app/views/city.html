@@ -1,0 +1,17 @@
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <h1 class="page-header">{{selectedCity.name | uppercase}}</h1>
+
+  
+  <div>
+  	<p>{{selectedCity.description}}</p>
+  	<h2 class="sub-header">Things to do</h2>
+  	<ul ng-repeat="attraction in selectedCity.attractions | orderBy:'-siteRating'">
+           <li> <a ng-href="#!/countries/{{selectedCountry}}/cities/{{selectedCity.name}}/attractions/{{attraction.permalink}}">{{attraction.name}} :</a> {{attraction.description | limitTo:300}}</li>
+                
+    </ul>
+  </div>
+
+  
+  
+</div>

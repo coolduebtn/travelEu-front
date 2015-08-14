@@ -1,0 +1,24 @@
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <h1 class="page-header">{{selectedAttraction.name | uppercase}}</h1>
+  <p ng-show="selectedAttraction.siteRating">Site Rating : {{selectedAttraction.siteRating}}/5</p>
+
+  
+  <div>
+  	<p>{{selectedAttraction.description}}</p>
+	<p ng-show="selectedAttraction.address">Address : {{selectedAttraction.address}}</p>
+	<p ng-show="selectedAttraction.phone">Phone : {{selectedAttraction.phone}}</p>
+	<p ng-show="selectedAttraction.email">Email : {{selectedAttraction.email}}</p>
+	<p ng-show="selectedAttraction.website">Website : {{selectedAttraction.website}}</p>
+	<p ng-show="selectedAttraction.hours">Opening Hours : {{selectedAttraction.hours}}</p>
+	<p ng-show="selectedAttraction.travelInstructions">How to reach: {{selectedAttraction.travelInstructions}}</p>
+	<p ng-show="selectedAttraction.tips">Useful Tips : {{selectedAttraction.tips}}</p>
+  </div>
+
+<dir-disqus disqus-shortname="disquschandan"
+                    disqus-identifier={{attractionName}}
+                    disqus-title={{attractionName}}
+                    readytobind="true">
+        </dir-disqus>
+
+</div>
